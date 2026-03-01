@@ -20,14 +20,12 @@
         }
         .hidden-step { display: none; }
 
-        /* Animasi Klap-Klip / Menyala untuk Foto */
         @keyframes klapKlip {
             0% { filter: drop-shadow(0 0 5px rgba(37, 99, 235, 0.4)); transform: scale(1); }
             50% { filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.8)); transform: scale(1.02); }
             100% { filter: drop-shadow(0 0 5px rgba(37, 99, 235, 0.4)); transform: scale(1); }
         }
 
-        /* Efek Border Menyala untuk Carousel */
         @keyframes glowingBorder {
             0% { box-shadow: 0 0 5px #2563eb; border-color: #2563eb; }
             50% { box-shadow: 0 0 20px #60a5fa; border-color: #60a5fa; }
@@ -64,7 +62,6 @@
             border: 2px solid #e2e8f0;
         }
 
-        /* Animasi Transaksi */
         .fade-in-out {
             transition: opacity 0.5s ease-in-out;
         }
@@ -72,7 +69,6 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-900">
 
-    <!-- Navigasi -->
     <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -85,14 +81,12 @@
         </div>
     </nav>
 
-    <!-- TEKS BERJALAN (MARQUEE) -->
     <div class="bg-blue-900 text-white py-2 overflow-hidden whitespace-nowrap border-b border-blue-800">
         <marquee scrollamount="6" class="font-bold text-xs md:text-sm tracking-wide">
             SOLUSI PIJAMAN TER MUDAH CEPAT AMAN DAN AMANAH CAIR 1X24jam PENCARIAN BISA MELALUI EWALET SEGERA AJUKAN SEKARANG MUMPUN BUNGA TERENDAH HARI INI 1.2% chat admin 085119265851 🙏 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOLUSI PIJAMAN TER MUDAH CEPAT AMAN DAN AMANAH CAIR 1X24jam PENCARIAN BISA MELALUI EWALET SEGERA AJUKAN SEKARANG MUMPUN BUNGA TERENDAH HARI INI 1.2% chat admin 085119265851 🙏
         </marquee>
     </div>
 
-    <!-- LANGKAH 1: KALKULATOR -->
     <div id="step1">
         <header class="bg-blue-600 py-12 px-4 text-white text-center">
             <h1 class="text-3xl font-bold mb-2">Solusi Pinjaman Tunai</h1>
@@ -138,7 +132,6 @@
                     </div>
                 </div>
 
-                <!-- Keamanan -->
                 <div class="mt-10 bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div class="flex items-start gap-4">
                         <div class="bg-blue-100 p-4 rounded-2xl">
@@ -155,7 +148,6 @@
                     </div>
                 </div>
 
-                <!-- RIWAYAT TRANSAKSI -->
                 <div class="mt-12 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
                     <div class="flex items-center justify-between mb-4">
                         <h4 class="font-black text-xs text-slate-400 uppercase tracking-widest">Riwayat Transaksi Hari Ini</h4>
@@ -178,17 +170,12 @@
                     </div>
                 </div>
 
-                <!-- Bagian Gambar Promo Aktif -->
                 <div class="mt-12 space-y-10">
                     <div class="live-photo-container">
                         <h3 class="font-bold text-slate-800 text-xl mb-2 text-center">Keuntungan Solusi Kami</h3>
-                        
-                        <!-- Banner 1: Carousel Glow -->
                         <div class="carousel-glow">
                             <img src="https://cdn.phototourl.com/uploads/2026-03-01-7260299d-4380-4f17-9792-4255d4faa035.jpg" alt="Promo Dana Cepat" class="w-full h-auto block" onerror="this.src='https://placehold.co/800x400/2563eb/white?text=Promo+Spesial+Cair+Kilat'">
                         </div>
-                        
-                        <!-- Banner 2: Live Glow -->
                         <img src="https://cdn.phototourl.com/uploads/2026-03-01-8bf6a0b8-c5ff-4d6b-a9fd-c6dc1bab8303.jpg" alt="Bunga Rendah" class="live-photo" onerror="this.src='https://placehold.co/800x400/0f172a/white?text=Bunga+Rendah+Mulai+0.1%'">
                     </div>
                 </div>
@@ -196,7 +183,6 @@
         </main>
     </div>
 
-    <!-- LANGKAH 2: FORM DATA -->
     <div id="step2" class="hidden-step min-h-screen bg-white">
         <header class="p-6 border-b flex items-center gap-4 bg-white sticky top-0 z-40">
             <button onclick="hideForm()" class="text-slate-400 p-2 hover:bg-slate-100 rounded-full transition-colors">
@@ -221,7 +207,6 @@
                     <input type="tel" id="inputWA" required placeholder="08xxxx" class="w-full p-4 bg-slate-50 rounded-2xl border-2 border-slate-100 focus:border-blue-500 focus:bg-white transition-all outline-none">
                 </div>
 
-                <!-- PILIHAN BANK / WALLET (BARU) -->
                 <div>
                     <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Metode Pencairan (Bank / E-Wallet)</label>
                     <select id="pilihanPencairan" required class="w-full p-4 bg-slate-50 rounded-2xl border-2 border-slate-100 focus:border-blue-500 focus:bg-white transition-all outline-none text-slate-700">
@@ -232,13 +217,11 @@
                             <option value="BANK BNI">BANK BNI</option>
                             <option value="BANK MANDIRI">BANK MANDIRI</option>
                             <option value="BANK PERMATA">BANK PERMATA</option>
-                            <option value="BANK DANAMON">BANK DANAMON</option>
                         </optgroup>
                         <optgroup label="E-WALLET">
                             <option value="DANA">DANA</option>
                             <option value="OVO">OVO</option>
                             <option value="GOPAY">GOPAY</option>
-                            <option value="SHOPEEPAY">SHOPEEPAY</option>
                         </optgroup>
                     </select>
                 </div>
@@ -248,7 +231,6 @@
                     <input type="text" id="inputRekening" required placeholder="Masukkan nomor rekening atau HP wallet" class="w-full p-4 bg-slate-50 rounded-2xl border-2 border-slate-100 focus:border-blue-500 focus:bg-white transition-all outline-none">
                 </div>
 
-                <!-- UNGGAH KTP -->
                 <div class="pt-4">
                     <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-3">Foto KTP (Wajib 1000x1500 px)</label>
                     <div id="dropZone" class="relative border-3 border-dashed border-slate-200 rounded-3xl p-10 text-center bg-slate-50 hover:bg-slate-100 transition-all cursor-pointer group">
@@ -258,7 +240,6 @@
                                 <i class="fas fa-camera text-2xl"></i>
                             </div>
                             <p class="text-sm font-bold text-slate-700">Ambil Foto KTP Sekarang</p>
-                            <p class="text-[10px] text-slate-400 mt-2 italic">Gunakan kamera langsung untuk verifikasi cepat</p>
                         </div>
                         <div id="previewContainer" class="hidden">
                             <img id="ktpPreview" class="mx-auto max-h-64 rounded-2xl mb-4 shadow-xl border-4 border-white">
@@ -279,7 +260,6 @@
         </form>
     </div>
 
-    <!-- NOTIFIKASI -->
     <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-8 py-4 rounded-3xl text-sm font-bold shadow-2xl transition-all opacity-0 translate-y-10 z-[100]">
         <span id="toastMsg"></span>
     </div>
@@ -290,7 +270,6 @@
         const interestRate = 0.015;
         let photoSource = "";
 
-        // Data Transaksi Random
         const transactions = [
             { name: "Budi Santoso", amount: "5.000.000" },
             { name: "Siti Aminah", amount: "2.500.000" },
@@ -301,9 +280,7 @@
             { name: "Eko Wahyudi", amount: "12.000.000" },
             { name: "Indah Permata", amount: "4.500.000" },
             { name: "Andi Wijaya", amount: "8.000.000" },
-            { name: "Maya Sari", amount: "6.000.000" },
-            { name: "Heri Susanto", amount: "4.000.000" },
-            { name: "Putri Rahayu", amount: "9.000.000" }
+            { name: "Maya Sari", amount: "6.000.000" }
         ];
         let transIndex = 0;
 
@@ -327,18 +304,15 @@
             return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(n);
         }
 
-        // Loop Transaksi
         function updateTransactions() {
             const box = document.getElementById('transactionBox');
             box.style.opacity = '0';
-            
             setTimeout(() => {
                 const data = transactions[transIndex];
                 document.getElementById('userName').innerText = data.name;
                 document.getElementById('userInitial').innerText = data.name.charAt(0);
                 document.getElementById('userAmount').innerText = "Rp " + data.amount;
                 document.getElementById('userTime').innerText = Math.floor(Math.random() * 59) + " menit yang lalu";
-                
                 box.style.opacity = '1';
                 transIndex = (transIndex + 1) % transactions.length;
             }, 500);
@@ -358,95 +332,4 @@
             currentTenor = t;
             document.querySelectorAll('.tenor-btn').forEach(btn => {
                 const isMatch = parseInt(btn.dataset.tenor) === t;
-                btn.className = isMatch ? "tenor-btn py-3 border-2 rounded-2xl font-bold border-blue-600 bg-blue-50 text-blue-700" : "tenor-btn py-3 border-2 rounded-2xl font-bold border-slate-200";
-            });
-            calculate();
-        }
-
-        document.getElementById('amountRange').oninput = (e) => { 
-            currentAmount = parseInt(e.target.value); 
-            calculate(); 
-        };
-
-        function showForm() {
-            s1.classList.add('hidden-step');
-            s2.classList.remove('hidden-step');
-            window.scrollTo(0, 0);
-        }
-
-        function hideForm() {
-            s2.classList.add('hidden-step');
-            s1.classList.remove('hidden-step');
-            window.scrollTo(0, 0);
-        }
-
-        function showToast(msg) {
-            document.getElementById('toastMsg').innerText = msg;
-            toast.classList.remove('opacity-0', 'translate-y-10');
-            setTimeout(() => toast.classList.add('opacity-0', 'translate-y-10'), 3000);
-        }
-
-        ktpInput.onchange = (e) => {
-            const file = e.target.files[0];
-            if (!file) return;
-            
-            errorBox.classList.add('hidden');
-            const reader = new FileReader();
-            
-            photoSource = (file.lastModified && (Date.now() - file.lastModified < 40000)) ? "KAMERA LANGSUNG" : "DARI GALERI";
-            
-            reader.onload = (event) => {
-                const img = new Image();
-                img.onload = () => {
-                    if (img.width !== 1000 || img.height !== 1500) {
-                        document.getElementById('errorMsg').innerText = `Resolusi Tidak Sesuai (${img.width}x${img.height}px). Gunakan 1000x1500px.`;
-                        errorBox.classList.remove('hidden');
-                        resetUpload();
-                        btnSubmitForm.disabled = true;
-                        return;
-                    }
-                    
-                    ktpPreview.src = event.target.result;
-                    uploadPlaceholder.classList.add('hidden');
-                    previewContainer.classList.remove('hidden');
-                    resInfo.innerText = `${img.width} x ${img.height} px`;
-                    sourceTag.innerText = photoSource;
-                    sourceTag.className = `inline-block px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-wider mb-2 ${photoSource === "KAMERA LANGSUNG" ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`;
-                    btnSubmitForm.disabled = false;
-                };
-                img.src = event.target.result;
-            };
-            reader.readAsDataURL(file);
-        };
-
-        function resetUpload() {
-            previewContainer.classList.add('hidden');
-            uploadPlaceholder.classList.remove('hidden');
-            ktpInput.value = "";
-        }
-
-        function submitFinal(e) {
-            e.preventDefault();
-            if (photoSource === "DARI GALERI") {
-                showToast("Ditolak! Harus menggunakan Kamera Langsung.");
-                return;
-            }
-            const message = `*PENGAJUAN SOLUSI DANA*
----------------------------
-👤 Nama: ${inputNama.value}
-📱 WhatsApp: ${inputWA.value}
-🏦 Metode: ${pilihanPencairan.value}
-💳 Rek/Wallet: ${inputRekening.value}
-💰 Jumlah: ${formatRupiah(currentAmount)}
-⏳ Tenor: ${currentTenor} Bulan
----------------------------
-Metode Foto: ${photoSource}`;
-            
-            window.location.href = `https://wa.me/6285119265951?text=${encodeURIComponent(message)}`;
-        }
-
-        calculate();
-    </script>
-</body>
-</html>
-
+                btn.className = isMatch ? "tenor-btn py-3 border-2 rou
